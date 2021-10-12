@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct FetchTestApp: App {
+    @StateObject var store = RepositoryStore(named: "Default")
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RepositoryListView(store: store)
         }
     }
 }

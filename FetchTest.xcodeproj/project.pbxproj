@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		DD3C14C227158C760038B7D8 /* FetchTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C14C127158C760038B7D8 /* FetchTestApp.swift */; };
-		DD3C14C427158C760038B7D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C14C327158C760038B7D8 /* ContentView.swift */; };
 		DD3C14C627158C790038B7D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3C14C527158C790038B7D8 /* Assets.xcassets */; };
 		DD3C14C927158C790038B7D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3C14C827158C790038B7D8 /* Preview Assets.xcassets */; };
+		DD3C14D027158C9E0038B7D8 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C14CF27158C9E0038B7D8 /* RepositoryModel.swift */; };
+		DD3C14D227158CEE0038B7D8 /* RepositoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C14D127158CEE0038B7D8 /* RepositoryStore.swift */; };
+		DD3C14D427158D5B0038B7D8 /* RepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C14D327158D5B0038B7D8 /* RepositoryListView.swift */; };
+		DD3C14D627158E220038B7D8 /* RepositoryFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C14D527158E220038B7D8 /* RepositoryFetcher.swift */; };
+		DD3C14D82715D6AC0038B7D8 /* RepositoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C14D72715D6AC0038B7D8 /* RepositoryDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD3C14BE27158C760038B7D8 /* FetchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3C14C127158C760038B7D8 /* FetchTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTestApp.swift; sourceTree = "<group>"; };
-		DD3C14C327158C760038B7D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DD3C14C527158C790038B7D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD3C14C827158C790038B7D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DD3C14CF27158C9E0038B7D8 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		DD3C14D127158CEE0038B7D8 /* RepositoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryStore.swift; sourceTree = "<group>"; };
+		DD3C14D327158D5B0038B7D8 /* RepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListView.swift; sourceTree = "<group>"; };
+		DD3C14D527158E220038B7D8 /* RepositoryFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFetcher.swift; sourceTree = "<group>"; };
+		DD3C14D72715D6AC0038B7D8 /* RepositoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				DD3C14C127158C760038B7D8 /* FetchTestApp.swift */,
-				DD3C14C327158C760038B7D8 /* ContentView.swift */,
+				DD3C14D527158E220038B7D8 /* RepositoryFetcher.swift */,
+				DD3C14CF27158C9E0038B7D8 /* RepositoryModel.swift */,
+				DD3C14D127158CEE0038B7D8 /* RepositoryStore.swift */,
+				DD3C14D327158D5B0038B7D8 /* RepositoryListView.swift */,
+				DD3C14D72715D6AC0038B7D8 /* RepositoryDetailView.swift */,
 				DD3C14C527158C790038B7D8 /* Assets.xcassets */,
 				DD3C14C727158C790038B7D8 /* Preview Content */,
 			);
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD3C14C427158C760038B7D8 /* ContentView.swift in Sources */,
+				DD3C14D027158C9E0038B7D8 /* RepositoryModel.swift in Sources */,
+				DD3C14D227158CEE0038B7D8 /* RepositoryStore.swift in Sources */,
+				DD3C14D427158D5B0038B7D8 /* RepositoryListView.swift in Sources */,
+				DD3C14D82715D6AC0038B7D8 /* RepositoryDetailView.swift in Sources */,
 				DD3C14C227158C760038B7D8 /* FetchTestApp.swift in Sources */,
+				DD3C14D627158E220038B7D8 /* RepositoryFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
