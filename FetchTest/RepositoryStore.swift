@@ -21,7 +21,7 @@ class RepositoryStore: ObservableObject {
     @Published var username: String = ""
     
     private let fetcher = RepositoryFetcher()
-    private var fetchRepositoriesCancellable: AnyCancellable?
+    private var fetchRepositoriesCancellable: Set<AnyCancellable> = []
     
     init(named name: String) {
         self.name = name
@@ -29,10 +29,12 @@ class RepositoryStore: ObservableObject {
     }
     
     func fetchRepositories(of user: String) {
-        fetchRepositoriesCancellable = fetcher.fetchData(of: user)
+        fetcher
+            .fetchData(of: user)
             .sink { repositories in
                 self.repositories = repositories
             }
+            .store(in: &fetchRepositoriesCancellable)
     }
     
     func clearRepositories() {

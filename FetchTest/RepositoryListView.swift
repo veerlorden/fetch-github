@@ -45,15 +45,15 @@ struct RepositoryListView: View {
     }
     
     var repositoriesList: some View {
-        Section(content: {
+        Section {
             ForEach(store.repositories) { repository in
                 NavigationLink(destination: RepositoryDetailView(repository: repository)) {
                     Text(repository.name)
                 }
             }
-        }, header: {
+        } header: {
             !store.repositories.isEmpty ? Text("Repositories List") : Text("")
-        })
+        }
     }
 }
 

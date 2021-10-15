@@ -8,8 +8,13 @@
 import Foundation
 import Combine
 
-class RepositoryFetcher {
-    private let session: URLSession
+protocol RepositoryFetchable {
+    func fetchData(of user: String) -> AnyPublisher<[Repository], Never>
+}
+
+class RepositoryFetcher: RepositoryFetchable {
+    
+    let session: URLSession
     
     init(session: URLSession = .shared) {
         self.session = session
