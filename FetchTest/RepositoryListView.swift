@@ -17,7 +17,7 @@ struct RepositoryListView: View {
                 searchField
                 repositoriesList
             }
-            .listStyle(GroupedListStyle())
+            .listStyle(.grouped)
             .navigationTitle("Github Repositories")
             .toolbar {
                 ToolbarItem(placement: .destructiveAction) {
@@ -28,15 +28,21 @@ struct RepositoryListView: View {
                 }
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(.stack)
     }
     
     var searchField: some View {
         Section {
             HStack {
-                TextField("e.g. veerlorden", text: $store.username)
-                    .autocapitalization(.none)
-                    .disableAutocorrection(true)
+                if #available(iOS 15.0, *) {
+                    TextField("e.g. veerlorden", text: $store.username)
+                        .textInputAutocapitalization(.never)
+                        .disableAutocorrection(true)
+                } else {
+                    TextField("e.g. veerlorden", text: $store.username)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
+                }
                 Button("Get") {
                     store.fetchRepositories(of: store.username)
                 }
